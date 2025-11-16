@@ -1,0 +1,565 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+   --cor-primaria: #981020;
+   --cor-texto-principal: #333333;
+   --cor-texto-claro: #ffffff;
+   --cor-fundo: #ffffff;
+   --cor-borda: #eeeeee;
+   
+   --fonte-titulos: 'Playfair Display', serif;
+   --fonte-corpo: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    line-height: 1.7;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    padding-top: 120px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;   
+    display: block;
+    margin: 0 auto;
+    transition: height 0.3s ease;
+}
+
+.header-left-area {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.pagina-home .btn-voltar {
+    display: none;
+}
+
+.btn-voltar {
+    background: transparent;
+    border: 2px solid var(--cor-texto-claro);
+    color: var(--cor-texto-claro);
+    border-radius: 50%;
+    cursor: pointer;
+    
+    height: 45px;
+    width: 45px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: var(--cor-texto-claro);
+    color: var(--cor-primaria);
+}
+
+.btn-voltar svg {
+    height: 24px;
+    width: 24px;
+    stroke: currentColor;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro-bem-vindo,
+.intro-topico {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro-bem-vindo h2 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.intro-topico h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.intro-bem-vindo p,
+.intro-topico p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-topico p strong,
+.intro-topico p a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.principais-receitas {
+    background-color: var(--cor-fundo);
+    padding: 40px 0;
+}
+
+.principais-receitas h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.recipe-card {
+    display: block; 
+    text-decoration: none;
+    color: inherit;
+
+    background-color: #ffffff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h4 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-content .card-link-text {
+    font-family: var(--fonte-corpo);
+    font-weight: 500;
+    color: var(--cor-primaria);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.recipe-card:hover .card-link-text {
+    text-decoration: underline;
+}
+
+.site-footer-bar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-apoio {
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.footer-contato {
+    font-family: var(--fonte-titulos);
+    font-size: 1.2rem;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-contato:hover {
+    text-decoration: underline;
+}
+
+.contato-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contato-intro h2 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+.contato-intro p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contato-intro p a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.form-container {
+    background-color: var(--cor-primaria);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--fonte-corpo);
+    font-weight: 500;
+    color: var(--cor-texto-claro);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: var(--fonte-corpo);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(152, 16, 32, 0.3);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid var(--cor-texto-claro);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-limpar {
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+}
+.btn-limpar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-enviar {
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-primaria);
+}
+.btn-enviar:hover {
+    background-color: #f1f1f1;
+    border-color: #f1f1f1;
+}
+
+.contato-obrigado {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    display: none;
+}
+.contato-obrigado h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+.contato-obrigado p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+}
+.contato-obrigado p a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.recipe-page h1 {
+    font-family: var(--fonte-titulos);
+    font-size: 2.8rem;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.recipe-image-main {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.recipe-description {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.recipe-title-icon {
+    font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.recipe-title-icon::before {
+    content: '🍴';
+    font-size: 1.8rem;
+    opacity: 0.6;
+}
+
+.recipe-content h3 {
+    font-family: var(--fonte-corpo);
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--cor-primaria);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 5px;
+}
+
+.recipe-content ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.recipe-content li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.recipe-final {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid var(--cor-borda);
+}
+
+.final-title {
+    font-family: var(--fonte-titulos);
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.final-title::before {
+    content: '🍽️';
+    font-size: 1.8rem;
+    opacity: 0.6;
+}
+
+.recipe-final p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 15px auto;
+}
+
+.recipe-final p a {
+     color: var(--cor-primaria);
+     font-weight: 500;
+     text-decoration: none;
+}
+.recipe-final p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    
+    body {
+        padding-top: 90px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .header-left-area {
+        justify-content: flex-start;
+    }
+
+    .btn-voltar {
+        height: 40px;
+        width: 40px;
+    }
+    .btn-voltar svg {
+        height: 20px;
+        width: 20px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .intro-bem-vindo h2 {
+        font-size: 2.2rem;
+    }
+    .intro-topico h3 {
+        font-size: 1.8rem;
+    }
+    .intro-bem-vindo p,
+    .intro-topico p {
+        font-size: 1rem;
+    }
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .footer-apoio {
+        font-size: 1rem;
+    }
+    .footer-contato {
+        font-size: 1.1rem;
+    }
+
+    .contato-intro h2 {
+        font-size: 2.2rem;
+    }
+    .contato-obrigado h3 {
+        font-size: 1.8rem;
+    }
+    .form-container {
+        padding: 20px;
+    }
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn {
+        width: 100%;
+    }
+
+    .recipe-page h1 {
+        font-size: 2.2rem;
+    }
+    .recipe-image-main {
+        height: 250px;
+    }
+    .recipe-description {
+        font-size: 1rem;
+    }
+    .recipe-content h2,
+    .final-title {
+        font-size: 1.8rem;
+    }
+    .recipe-title-icon::before,
+    .final-title::before {
+        font-size: 1.5rem;
+    }
+    .recipe-content li,
+    .recipe-final p {
+        font-size: 1rem;
+    }
+}

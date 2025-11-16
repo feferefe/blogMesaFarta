@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Mesa Farta - Contato</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="container">
+            
+            <div id="form-wrapper">
+                <section class="contato-intro">
+                    <h2>Queremos te Ouvir!</h2>
+                    <p>No Mesa Farta, a conversa é um ingrediente essencial! Você tem uma dúvida sobre uma receita? Uma sugestão de prato que deveríamos fazer? Quer nos mostrar seu prato? Ou uma história de família ligada à comida para compartilhar? Este espaço é seu. Adoramos receber seu recado!</p>
+                </section>
+
+                <section class="form-container">
+                    
+                    <form action="#" method="post" id="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Insira seu nome e sobrenome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Endereço de e-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seunome@exemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Mensagem reduzida sobre seu contato">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Descreva com detalhes a necessidade, dúvida, situação ou elogio." required></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="reset" class="btn btn-limpar">Limpar</button>
+                            <button type="submit" class="btn btn-enviar">Enviar</button>
+                        </div>
+                    </form>
+                </section>
+            </div> <section class="contato-obrigado" id="obrigado-mensagem">
+                <h3>Obrigado pelo seu Contato!</h3>
+                <p>Em nosso blog, cada recado é lido com o mesmo <a href="#">carinho</a> que preparamos nossas receitas! Lemos todas as <a href="#">mensagens</a> e faremos o possível para responder o mais breve que der. Enquanto isso, sinta-se em casa e volte para a página inicial para conferir nossas outras <a href="#">delícias</a> do momento.</p>
+                <p>A mesa está sempre posta e farta!</p>
+            </section>
+
+        </div> </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
